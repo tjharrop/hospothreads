@@ -350,6 +350,7 @@ h1, h2, h3, h4, h5, h6 {
   background-size: cover;
   background-attachment: fixed;
   position: relative;
+  background-position: center center;
   width: 100%;
   background-color: #e6e6e6;
   color: #fff;
