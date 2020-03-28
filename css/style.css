@@ -479,11 +479,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #fh5co-services,
-#fh5co-testimony,
+#fh5co-testimony11,
 #fh5co-explore,
 #fh5co-footer,
 #fh5co-work,
-#fh5co-counters,
+#fh5co-counters11,
 #fh5co-pricing,
 #fh5co-blog {
   padding: 8em 0;
@@ -620,6 +620,9 @@ h1, h2, h3, h4, h5, h6 {
 .testimony-entry .feed-bubble p {
   color: #fff;
 }
+.testimony-entry .feed-bubble a {
+  background-color: #fff;
+}
 .testimony-entry .author-img {
   width: 75px;
   height: 75px;
@@ -719,6 +722,12 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
+}
+.pricing__item.image_head, .pricing__item.image_head:hover {
+  padding-top: 110%;
+  background-size: 100%;
+  background-position: top;
+  background-repeat: no-repeat;
 }
 .pricing__item_photo {
   margin: 1.5em 0;
@@ -1432,4 +1441,6 @@ h1, h2, h3, h4, h5, h6 {
   opacity: 0;
 }
 
-/*# sourceMappingURL=style.css.map */
+.product_img {
+  max-width: 100%;
+}
