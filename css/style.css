@@ -803,8 +803,8 @@ h1, h2, h3, h4, h5, h6 {
   background: #82C57E;
   -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
   transition: transform 0.3s, opacity 0.3s;
-  -webkit-transform: translate3d(0, -15px, 0);
-  transform: translate3d(0, -15px, 0);
+  -webkit-transform: translate3d(0, +15px, 0);
+  transform: translate3d(0, +15px, 0);
 }
 
 .pricing__item:hover .pricing__action {
