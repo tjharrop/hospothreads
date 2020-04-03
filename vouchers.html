@@ -103,11 +103,11 @@
 		<div class="fh5co-project">
 			<div class="container">
 				<div class="row">
-					<form target="_top" action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" >
+					<form target="_top" action="https://www.paypal.com/cgi-bin/webscr" method="post" >
 						<input type="hidden" name="cmd" value="_xclick">
 						<input type="hidden" name="lc" value="AU">
 						<input type="hidden" name="item_name" value="Hospothreads voucher">
-						<input type="hidden" name="item_number" value="HV">
+						<input type="hidden" name="item_number" value="Burrow Bar" id="itemNumber">
 						<input type="hidden" name="currency_code" value="AUD">
 						<input type="hidden" name="button_subtype" value="services">
 						<input type="hidden" name="no_note" value="0">
@@ -118,12 +118,12 @@
 							<div class="pricing__item">
 								<div class="pricing__price">Pick</div>
 								<p class="pricing__sentence">Choose a venue from this list. We're adding new venues every day.</p>
-								<select name="business" style="max-width:200px;">
-									<option value="sb-434eyy1318391@business.example.com">Burrow Bar, Sydney</option>
-									<option value="sb-434eyy1318391@business.example.com">Glorietta, Sydney</option>
-									<option value="sb-434eyy1318391@business.example.com">Papa Gedes, Sydney</option>
-									<option value="sb-434eyy1318391@business.example.com">Tokyo Bird, Sydney</option>
-									<option value="sb-434eyy1318391@business.example.com">Osaka Trading Co, Sydney</option>
+								<select name="business" style="max-width:200px;" id="venueSelect">
+									<option value="tj@hospothreads.com" data-id="Burrow Bar">Burrow Bar, Sydney</option>
+									<option value="tj@hospothreads.com" data-id="Double Deuce Lounge">Double Deuce Lounge, Sydney</option>
+									<option value="tj@hospothreads.com" data-id="Ramblin Rascal Tavern">Ramblin Rascal Tavern, Sydney</option>
+									<option value="tj@hospothreads.com" data-id="Tokyo Bird">Tokyo Bird, Sydney</option>
+									<option value="tj@hospothreads.com" data-id="Osaka Trading Co">Osaka Trading Co, Sydney</option>
 								</select>
 							</div>
 						</div>
@@ -132,10 +132,11 @@
 								<div class="pricing__price"><span class="pricing_currency">$</span>?</div>
 								<p class="pricing__sentence">Select an amount, all the cash goes directly to the venue.</p>
 								<select name="amount">
-									<option value="25.00">$25</option>
-									<option value="50.00">$50</option>
-									<option value="100.00">$100</option>
-									<option value="200.00">$200</option>
+									<option value="1.00">$1 test</option>
+									<option value="1.00">$25</option>
+									<option value="1.00">$50</option>
+									<option value="1.00">$100</option>
+									<option value="1.00">$200</option>
 								</select>
 							</div>
 						</div>
@@ -217,6 +218,14 @@
 	<script src="js/jquery.countTo.js"></script>
 	<!-- Main JS (Do not remove) -->
 	<script src="js/main.js"></script>
+
+	<script>
+	$("#venueSelect").change(function(){
+		$("#itemNumber").val(
+			$(this).find(':selected').data('id')
+		);
+	});
+	</script>
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-162087834-1"></script>
