@@ -7,7 +7,7 @@
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Hospothreads vouchers</title>
+	<title>hospo threads - hospo merch store</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="A place to support your fave hospo pals by buying their lovely merch" />
 	<meta name="author" content="TJ Harrop" />
@@ -56,12 +56,13 @@
 				<nav class="navbar navbar-default navbar-fixed-top">
 					<div class="navbar-header">
 						<!-- Mobile Toggle Menu Button -->
-						<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
+						<a href="/" class="js-fh5co-nav-toggle fh5co-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
 						<a class="navbar-brand" href="/">hospo threads</a>
 					</div>
 					<div id="navbar" class="navbar-collapse collapse">
 						<ul class="nav navbar-nav navbar-right">
 							<li class="active"><a href="/" data-nav-section="home"><span>Home</span></a></li>
+							<li><a href="/vouchers" data-nav-section="home"><span>Vouchers</span></a></li>
 							<li><a href="#" data-nav-section="contact"><span>List your venue</span></a></li>
 						</ul>
 					</div>
@@ -77,7 +78,7 @@
 				<div class="text-inner">
 					<div class="row">
 						<div class="col-md-8 col-md-offset-2 text-center">
-							<h2 class="animate-box">Hospothreads is teaming up with venues so that you, the amazing customers, can pre-pay $25, $50, or $100. Future bonus for you. COVID cash-flow for them.</h2>
+							<h2 class="animate-box">A helping hand for hospo whilst COVID-19 makes their business quiet as shit</h2>
 						</div>
 					</div>
 				</div>
@@ -85,75 +86,24 @@
 		</div>
 	</section>
 
-	<section id="fh5co-explore" data-section="explore">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 section-heading text-center">
-					<div class="row">
-						<div class="col-md-8 col-md-offset-2 subtext animate-box">
-							<p>You know what sucks? Not being able to go to your favourite eateries and bars. But let's face it, it's cheaper.</p>
-							<p>With all that money being saved, why not buy future you a beer? Or a whole meal. Or maybe buy mate with a suspicious temperature and cough a future beer - they're gonna need it.</p>
-							<p></p>
-							<p>All the money goes straight to the venue, we don't charge a cent.</p>
-						</div>
+	<section id="fh5co-services" data-section="services">
+		<div class="fh5co-services">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 text-center">
+						<h2>Oi thanks yeah? 🥂</h2>
+						<p>Real talk - this is one of the hardest time our industry has seen. Unlike last time we shut down (prohibition) this time we're on all on the same side.</p>
+						<p>Your support isn't just an amount of money, it's a commitment to a small business. So, like, we love you?</p>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="fh5co-project">
-			<div class="container">
-				<div class="row">
-					<form target="_top" action="https://www.paypal.com/cgi-bin/webscr" method="post" >
-						<input type="hidden" name="cmd" value="_xclick">
-						<input type="hidden" name="lc" value="AU">
-						<input type="hidden" name="item_name" value="Hospothreads voucher">
-						<input type="hidden" name="item_number" value="Burrow Bar" id="itemNumber">
-						<input type="hidden" name="currency_code" value="AUD">
-						<input type="hidden" name="button_subtype" value="services">
-						<input type="hidden" name="no_note" value="0">
-						<input type="hidden" name="shipping" value="0">
-						<input type="hidden" name="notify_url" value="https://hospothreads-ipn.herokuapp.com/api/ipn/paypal">
-						<input type="hidden" name="return" value="https://hospothreads.com/cheers">
-						<input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynowCC_LG.gif:NonHostedGuest">
-							<div class="col-md-4 text-center animate-box fadeInUp animated-fast">
-							<div class="pricing__item">
-								<div class="pricing__price">Pick</div>
-								<p class="pricing__sentence">Choose a venue from this list. We're adding new venues every day.</p>
-								<select name="business" style="max-width:200px;" id="venueSelect">
-									<option value="tj@hospothreads.com" data-id="Burrow Bar">Burrow Bar, Sydney</option>
-									<option value="tj@hospothreads.com" data-id="Double Deuce Lounge">Double Deuce Lounge, Sydney</option>
-									<option value="tj@hospothreads.com" data-id="Ramblin Rascal Tavern">Ramblin Rascal Tavern, Sydney</option>
-									<option value="tj@hospothreads.com" data-id="Tokyo Bird">Tokyo Bird, Sydney</option>
-									<option value="tj@hospothreads.com" data-id="Osaka Trading Co">Osaka Trading Co, Sydney</option>
-								</select>
-							</div>
-						</div>
-						<div class="col-md-4 text-center animate-box fadeInUp animated-fast">
-							<div class="pricing__item">
-								<div class="pricing__price"><span class="pricing_currency">$</span>?</div>
-								<p class="pricing__sentence">Select an amount, all the cash goes directly to the venue.</p>
-								<select name="amount">
-									<option value="1.00">$1 test</option>
-									<option value="1.00">$25</option>
-									<option value="1.00">$50</option>
-									<option value="1.00">$100</option>
-									<option value="1.00">$200</option>
-								</select>
-							</div>
-						</div>
-						<div class="col-md-4 text-center animate-box fadeInUp animated-fast">
-							<div class="pricing__item">
-								<div class="pricing__price">Pay</div>
-								<p class="pricing__sentence">Click the button. Pay. Get an email</p>
-								<input type="submit" class="btn btn-primary btn-lg pricing__action" value="Buy it">
-								<a href="email-templates/voucher.html"></a>
-							</div>
-						</div>
-					</form>
-				</div>
-			</div>
-		</div>
 	</section>
+
+
+
+
+
 
 
 
@@ -219,14 +169,6 @@
 	<script src="js/jquery.countTo.js"></script>
 	<!-- Main JS (Do not remove) -->
 	<script src="js/main.js"></script>
-
-	<script>
-	$("#venueSelect").change(function(){
-		$("#itemNumber").val(
-			$(this).find(':selected').data('id')
-		);
-	});
-	</script>
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-162087834-1"></script>
