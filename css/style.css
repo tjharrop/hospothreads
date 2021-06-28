@@ -428,7 +428,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 30px;
   font-weight: 300;
   color: rgba(255, 255, 255, 0.8);
-  margin: 0 0 60px 0;
+  margin: 24rem 0 4rem 0;
 }
 #fh5co-home .text-inner .call-to-action {
   display: block;
@@ -569,7 +569,7 @@ h1, h2, h3, h4, h5, h6 {
 .fh5co-portfolio .portfolio-text h3 {
   font-size: 20px;
 }
-.stuff, {
+.stuff {
   margin: 0;
   padding: 0;
   border-top: 1px solid rgba(0, 0, 0, 0.05);
@@ -623,6 +623,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .testimony-entry .feed-bubble a {
   background-color: #fff;
+  padding: 0 .5rem;
 }
 .testimony-entry .author-img {
   width: 75px;
