@@ -7,11 +7,20 @@
         window.open(url, '_blank');
       }
     });
-  }
+  };
+
+  var shirthouse = function (state) {
+    $('.tshirt__switch:last-child').animate({ 'opacity' : state }, 'slow');
+    setTimeout(function () {
+      shirthouse(state ? 0 : 1);
+    }, 3000);
+  
+  };
 
 	// Document on load.
 	$(function(){
 		launchpad();
+		shirthouse();
 	});
 
 }());
