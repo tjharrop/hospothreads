@@ -40,7 +40,6 @@
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/style_2.0.css">
 
-
 	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
 	<!-- FOR IE9 below -->
@@ -210,8 +209,22 @@
 	<script src="js/jquery.countTo.js"></script>
 	<!-- Main JS (Do not remove) -->
 	<script src="js/main.js"></script>
-  <!-- JS 2.0 (Do not remove this either) -->
-  <script src="js/scripts_2.0.js"></script>
+
+	<script>
+		;(function () {
+			var shirthouse = function (state) {
+				$('.tshirt__switch:last-child').animate({ 'opacity' : state }, 'slow');
+				setTimeout(function () {
+					shirthouse(state ? 0 : 1);
+				}, 3000);
+			};
+
+			// Document on load
+			$(function(){
+				shirthouse();
+			});
+		}());
+	</script>
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-162087834-1"></script>
