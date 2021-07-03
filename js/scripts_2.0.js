@@ -9,41 +9,58 @@
 		});
 	};
 
-	var shirthouse = function (state) {
-		$('.tshirt__switch:last-child').animate({ 'opacity' : state }, 'slow');
-		setTimeout(function () {
-			shirthouse(state ? 0 : 1);
-		}, 3000);
-	
-	};
-
 	var equality = function () {
 		var minimum = 0;
 		$('.filter').each(function () {
 			var venue = $(this);
-			console.log($(this).height())
 
 			if (venue.height() > minimum) {
 				minimum = venue.height();
 			}
 		}).height(minimum);
+	};
 
-		// alert(minimum)
+	var loaded = function () {
+		$('.portfolio-container .portfolio-image').imagesLoaded(function () {
+			$(".portfolio-image").each(function () {
+				$(this).hide().parent().css( "background-image", "url(" + this.src + ")");
+			});
+
+			init();
+		});
+	};
+
+	var filotope = function () {
+		// Do the needful
+		// alert("filotope")
+	};
+
+	var isotope = function (filter) {
+		var selector = filter || '.filter-aus';
+
+		$('.filter').isotope({
+			itemSelector: selector,
+			layoutMode: 'fitRows'
+		});
 	};
 
 	var filter = function (filter) {
-		var selector = filter || 'filter-aus';
+		$('#filter-control').on('click', '.filter-check', function (event) {
+			event.preventDefault();
+	
+			isotope('.' + $(this).context.value);	
+		});
+	};
 
-		// $('.filter').isotope({
-		// 	itemSelector: selector
-		// });
+	var init = function () {
+		launchpad();
+		equality();
+		filotope();
+		filter();
 	};
 
 	// Document on load
-	$(function(){
-		launchpad();
-		shirthouse();
-		equality();
-		// filter();
+	$(function () {
+		loaded();
 	});
 }());
