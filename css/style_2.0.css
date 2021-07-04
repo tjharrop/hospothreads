@@ -39,7 +39,8 @@
   top: -3rem;
 }
 
-.filter {
+.portfolio {
+  overflow: hidden;
   padding-left: 0;
   padding-right: 0;
   position: absolute;
@@ -47,9 +48,15 @@
 }
 
 @media (min-width: 992px) {
-  .col-md-4 {
+  .portfolio {
     padding-left: 1rem;
     padding-right: 1rem;
     width: calc(33.33333% - 1rem);
   }
+}
+
+.portfolio img {
+  left: 110%;
+  right: 100%;
+  position: absolute;
 }
