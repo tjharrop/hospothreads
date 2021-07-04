@@ -40,19 +40,52 @@
 	var isotope = function (filter) {
 		var selector = filter || '.filter-aus';
 
-		$('.filter-container').isotope({
-			itemSelector: selector,
-			percentPosition: true
-		});
+		if (selector === ".filter") {
+			$('.filter-container').isotope({
+				itemSelector: selector,
+				percentPosition: true
+			});
+		} else if (selector === ".filter-all") {
+			$('.filter-container').isotope({
+				filter: '.filter'
+			});
+		} else {
+			$('.filter-container').isotope({
+				filter: selector
+			});
+		}
 	};
 
 	var filter = function (filter) {
 		$('#filter-control').on('click', '.filter-check', function (event) {
-			event.preventDefault();
+			// event.preventDefault();
+			var selector = '.' + $(this).context.value;
 	
-			isotope('.' + $(this).context.value);	
+			isotope(selector);	
 		});
 	};
+
+	var state = function () {
+		var control = $('#filter-control').closest(".container");
+
+		control.show();
+	};
+	window.state = state;
+
+	var search = function () {
+		var queryString = document.location.search.substr(1);
+		var queries = queryString.split("&");
+
+		for (var query of queries) {
+			var keyValue = query.split("=");
+			var key = keyValue[0];
+			var value = keyValue[1];
+
+			if (window[key]) {
+				window[key](value);
+			}
+		}
+	}
 
 	var init = function () {
 		launchpad();
@@ -65,4 +98,7 @@
 	$(function () {
 		loaded();
 	});
+
+	// Document pre-load
+	search();
 }());
