@@ -38,3 +38,18 @@
   position: absolute;
   top: -3rem;
 }
+
+.filter {
+  padding-left: 0;
+  padding-right: 0;
+  position: absolute;
+  width: calc(100% - 3rem);
+}
+
+@media (min-width: 992px) {
+  .col-md-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    width: calc(33.33333% - 1rem);
+  }
+}

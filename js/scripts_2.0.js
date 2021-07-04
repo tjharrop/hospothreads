@@ -33,14 +33,16 @@
 	var filotope = function () {
 		// Do the needful
 		// alert("filotope")
+
+		isotope(".filter");
 	};
 
 	var isotope = function (filter) {
 		var selector = filter || '.filter-aus';
 
-		$('.filter').isotope({
+		$('.filter-container').isotope({
 			itemSelector: selector,
-			layoutMode: 'fitRows'
+			percentPosition: true
 		});
 	};
 
