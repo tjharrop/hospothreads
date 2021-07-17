@@ -7,7 +7,15 @@
 				window.open(url, '_blank');
 			}
 		});
-	};
+
+		$(document).on('click', '.newsstand a', function (event) {
+			if ($(this).attr('href').indexOf("http") !== -1) {
+				event.preventDefault();
+				var url = $(this).attr('href'); 
+				window.open(url, '_blank');
+			}
+		});
+  };
 
 	var equality = function () {
 		var minimum = 0;
@@ -18,6 +26,20 @@
 				minimum = venue.height();
 			}
 		}).height(minimum);
+	};
+
+  var extension = function () {
+    var home = document.location.href.indexOf('0.0.0.0');
+
+    if (home !== -1) {
+      $('#navbar .external').each(function () {
+        var $anchor = $(this);
+  
+        $anchor.attr('href')
+        $anchor.attr('href', $anchor.attr('href') + '.html');
+      });
+    }
+ 
 	};
 
 	var loaded = function () {
@@ -89,6 +111,7 @@
 
 	var init = function () {
 		launchpad();
+		extension();
 		equality();
 		filotope();
 		filter();

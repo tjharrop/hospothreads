@@ -20,9 +20,20 @@
   padding: 0;
 }
 
+#fh5co-newsstand {
+  background-color: white;
+  min-height: 20rem;
+  padding: 3rem 0;
+  margin-bottom: 3rem;
+}
+
 .section-heading {
   padding-bottom: 0;
   margin-bottom: 0;
+}
+
+.section-heading .sub-heading {
+  margin-top: -3rem;
 }
 
 .tshirt__switcher {
@@ -59,4 +70,56 @@
   left: 110%;
   right: 100%;
   position: absolute;
+}
+
+.media-container-row {
+  margin: 2.5rem 1rem;
+}
+
+.media-container-row > div {
+  float: none;
+  margin: 0 auto;
+}
+
+.counter-container .counter {
+  text-overflow: clip;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 40px;
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  margin: 0 0 5px;
+  line-height: 40px;
+  transition: all .2s;
+  height: 40px;
+  width: 5rem;
+}
+
+.counter-container div {
+  margin-bottom: 1rem;
+  padding-left: 6rem;
+}
+
+.newsstand a {
+  display: block;
+}
+
+.newsstand h3 {
+  display: inline-block;
+  margin: 0 0 1rem;
+  padding: .5rem;
+}
+
+.newsstand a:hover h3 {
+  text-decoration: underline;
+}
+
+.newsstand bold {
+  /*background: #f4d197; */
+  border: .125rem solid;
+  color: #e58d00;
+  display: inline-block;
+  margin: 0 1rem 0 0;
+  padding: 0 .5rem;
 }

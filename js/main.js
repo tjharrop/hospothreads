@@ -1,8 +1,5 @@
 ;(function () {
-	
 	'use strict';
-
-
 
 	// iPad and iPod detection	
 	var isiPad = function(){
@@ -18,10 +15,8 @@
 
 	// Parallax
 	var parallax = function() {
-		$(window).stellar();
+    $(window).stellar();
 	};
-
-
 
 	// Burger Menu
 	var burgerMenu = function() {
@@ -44,7 +39,8 @@
 	// Page Nav
 	var clickMenu = function() {
 
-		$('#navbar a:not([class="external"])').click(function(event){
+		// $('#navbar a:not([class="external"])').click(function(event){
+    $('#navbar a.internal').click(function(event){
 			var section = $(this).data('nav-section'),
 				navbar = $('#navbar');
 
@@ -181,17 +177,16 @@
 	};
 
 	// Document on load.
-	$(function(){
+	$(function () {
+    if ($(window).stellar) {
+      parallax();
+      windowScroll();
+      navigationSection();
+      counterWayPoint();
+      contentWayPoint();
+    }
 
-		parallax();
 		burgerMenu();
 		clickMenu();
-		windowScroll();
-		navigationSection();
-		counterWayPoint();
-		contentWayPoint();
-
 	});
-
-
 }());
