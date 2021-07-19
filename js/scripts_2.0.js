@@ -15,7 +15,26 @@
 				window.open(url, '_blank');
 			}
 		});
-  };
+	};
+
+	var extra = function () {
+		var $articles = $('.newsstand h4');
+		var length = $articles.length;
+
+		$('.newsstand h4').each(function () {
+			var counter = length.toString();
+
+			if (counter.length < 2) {
+				counter = "0" + counter + ".";
+			} else {
+				counter = counter + ".";
+			}
+
+			$(this).html(counter);
+
+			length = length - 1;
+		})
+	};
 
 	var equality = function () {
 		var minimum = 0;
@@ -28,17 +47,17 @@
 		}).height(minimum);
 	};
 
-  var extension = function () {
-    var home = document.location.href.indexOf('0.0.0.0');
+	var extension = function () {
+		var home = document.location.href.indexOf('0.0.0.0');
 
-    if (home !== -1) {
-      $('#navbar .external').each(function () {
-        var $anchor = $(this);
-  
-        $anchor.attr('href')
-        $anchor.attr('href', $anchor.attr('href') + '.html');
-      });
-    }
+		if (home !== -1) {
+			$('#navbar .external').each(function () {
+				var $anchor = $(this);
+	
+				$anchor.attr('href')
+				$anchor.attr('href', $anchor.attr('href') + '.html');
+			});
+		}
  
 	};
 
@@ -111,8 +130,10 @@
 
 	var init = function () {
 		launchpad();
-		extension();
+
 		equality();
+		extension();
+		extra();
 		filotope();
 		filter();
 	};
