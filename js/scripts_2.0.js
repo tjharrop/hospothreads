@@ -8,7 +8,7 @@
 			}
 		});
 
-		$(document).on('click', '.newsstand a', function (event) {
+		$(document).on('click', '.newsextra a, .newsstand a', function (event) {
 			if ($(this).attr('href').indexOf("http") !== -1) {
 				event.preventDefault();
 				var url = $(this).attr('href'); 
@@ -21,18 +21,30 @@
 		var $articles = $('.newsstand h4');
 		var length = $articles.length;
 
-		$('.newsstand h4').each(function () {
-			var counter = length.toString();
+		function plus1() {
+			return length + 1;
+		}
 
+		function counterattack(counter) {
 			if (counter.length < 2) {
 				counter = "0" + counter + ".";
 			} else {
 				counter = counter + ".";
 			}
 
-			$(this).html(counter);
-
 			length = length - 1;
+
+			return counter;
+		}
+
+		$('.newsextra h4').html(counterattack(plus1().toString()));
+		$('.newsextra h3 span').html($('.newsextra h4').html());
+
+		length = plus1();
+
+		$('.newsstand h4').each(function () {
+			var counter = length.toString();
+			$(this).html(counterattack(counter));
 		})
 	};
 
