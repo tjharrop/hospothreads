@@ -171,3 +171,87 @@
 .newsextra bold {
   float: left;
 }
+
+div.menu {
+  margin: 0 -1rem;
+  padding-left: 0rem;
+}
+
+.menu h3 {
+  background-color: #8f989f;
+  border-top: .25rem solid;
+  color: white;
+  margin: 0 0 .5rem;
+  padding: 1.5rem;
+}
+
+.venue {
+  border-bottom: .25rem solid;
+  min-height: 220px;
+  margin-top: 1.5rem;
+  padding: 0 0 1rem;
+}
+
+.venue-link {
+  color: #000;
+  text-decoration: none !important;
+}
+
+.venue-link:hover * {
+  color: inherit;
+  text-decoration: underline !important;
+}
+
+.venue-link:hover p {
+  text-decoration: none !important;
+}
+
+.venue-map {
+  background-color: #e58d00;
+  float: left;
+  height: 200px;
+  margin: 0 2rem 0 0;
+  overflow: hidden;
+  position: relative;
+  width: 200px;
+}
+
+.venue-map::after {
+  bottom: .5rem;
+  content: "";
+  border: .125rem solid white;
+  left: .5rem;
+  position: absolute;
+  right: .5rem;
+  top: .5rem;
+}
+
+.venue-map iframe {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  margin: -100px;
+  opacity: 0.5;
+}
+
+.venue-menu {
+  padding-left: 220px;
+}
+
+.venue-name {
+  margin: 0 0 1rem;
+}
+
+.venue-region {
+  margin: 0 0 1rem;
+}
+
+.venue-days {
+  margin: 0 0 1rem;
+}
+
+.venue-handshake {
+  background-color: #e58d00;
+  color: white !important;
+  padding: 0 1rem;
+  text-decoration: none !important;
+}
