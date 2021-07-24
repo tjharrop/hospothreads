@@ -146,6 +146,10 @@
   width: 100%;
 }
 
+.newsextra h1 {
+  font-size: 3rem;
+}
+
 .newsextra h2 {
   position: relative;
   top: -1rem;
