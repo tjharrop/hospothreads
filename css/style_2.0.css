@@ -231,14 +231,13 @@ div.menu {
 }
 
 .venue-map iframe {
-  -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
   margin: -100px;
   opacity: 0.5;
 }
 
 .venue-menu {
-  padding-left: 220px;
+  padding: 0 0 0 22rem;
 }
 
 .venue-name {
@@ -258,4 +257,21 @@ div.menu {
   color: white !important;
   padding: 0 1rem;
   text-decoration: none !important;
+}
+
+/* RWD when you can't RTD */
+
+@media screen and (max-width: 26.5rem) {
+  .venue-map {
+    margin: 0;
+    width: 100%;
+  }
+
+  .venue-map iframe {
+    width: 150% !important;
+  }
+
+  .venue-menu {
+    padding: 22rem 0 0;
+  }
 }
