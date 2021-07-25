@@ -1,4 +1,8 @@
 ;(function () {
+	var options = {
+		stated: '[value="filter-all"]'
+	};
+
 	var launchpad = function () {
 		$(document).on('click', '.animate-box a', function (event) {
 			if ($(this).attr('href').indexOf("http") !== -1) {
@@ -119,19 +123,56 @@
 
 	var filter = function (filter) {
 		$('#filter-control').on('click', '.filter-check', function (event) {
-			// event.preventDefault();
-			var selector = '.' + $(this).context.value;
+			event.preventDefault();
+			var $selected = $(this);
+			var selector = '.' + $selected.context.value;
+
+			$('.filter-check').prop( "checked", false );
+			$selected.prop( "checked", true );
 	
 			isotope(selector);	
 		});
 	};
 
-	var state = function () {
-		var control = $('#filter-control').closest(".container");
+	var filtered = function () {
+		var selector = '.filter-' + options.stated.split('-')[1].split('"')[0];
 
-		control.show();
+		isotope(selector);
+	};
+
+	var state = function (stated) {
+		// var control = $('#filter-control').closest(".container");
+
+		// control.show();
+
+		if (stated) {
+			options.stated = `[value="filter-${stated}"]`;
+		}
 	};
 	window.state = state;
+
+	var switcher = function () {
+		var counter = $('[data-toggle="switch"]').length;
+		var counted = 0;
+
+		$('[data-toggle="switch"]').bootstrapSwitch({
+			onColor: 'retroOrange',
+			onInit: function () {
+				counted += 1;
+
+				if (counted === counter) {
+					$('#filter-control').fadeTo('slow', 1);
+				}
+			},
+			onSwitchChange: function () {
+				$('[data-toggle="switch"]').not($(this)).bootstrapSwitch('state', false, true);
+
+				$(this).click();
+			}
+		});
+
+		$(options.stated).bootstrapSwitch('state', true, true).click();
+	};
 
 	var search = function () {
 		var queryString = document.location.search.substr(1);
@@ -156,6 +197,8 @@
 		extra();
 		filotope();
 		filter();
+		switcher();
+		filtered();
 	};
 
 	// Document on load

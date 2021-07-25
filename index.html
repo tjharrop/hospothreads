@@ -41,6 +41,9 @@
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/style_2.0.css">
 
+	<!-- Plugins -->
+	<link rel="stylesheet" href="plugins/bootstrap-switch/css/bootstrap4/bootstrap-switch.min.css">
+
 	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
 	<!-- FOR IE9 below -->
@@ -161,34 +164,34 @@
 			</div>
 		</div>
 		<div class="fh5co-project">
-			<div class="container" hidden>
+			<div class="container">
 				<div class="row">
 					<div id="filter-control">
 						<form>
 							<div class="form-group">
-								<div class="form-check form-check-inline">
-									<input class="filter-check form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio0" value="filter-all">
-									<label class="form-check-label" for="inlineRadio0">ALL</label>
+								<div class="custom-control custom-switch filter-filter">
+									<label class="custom-control-label" for="customSwitch0">ALL</label>
+									<input type="checkbox" data-toggle="switch" class="custom-control-input filter-check" id="customSwitch0" value="filter-all">
 								</div>
-								<div class="form-check form-check-inline">
-									<input class="filter-check form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="filter-aus">
-									<label class="form-check-label" for="inlineRadio1">AUS</label>
+								<div class="custom-control custom-switch filter-filter">
+									<label class="custom-control-label" for="customSwitch1">AUS</label>
+									<input type="checkbox" data-toggle="switch" class="custom-control-input filter-check" id="customSwitch1" value="filter-aus">
 								</div>
-								<div class="form-check form-check-inline">
-									<input class="filter-check form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="filter-nsw">
-									<label class="form-check-label" for="inlineRadio2">NSW</label>
+								<div class="custom-control custom-switch filter-filter">
+									<label class="custom-control-label" for="customSwitch2">NSW</label>
+									<input type="checkbox" data-toggle="switch" class="custom-control-input filter-check" id="customSwitch2" value="filter-nsw">
 								</div>
-								<div class="form-check form-check-inline">
-									<input class="filter-check form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="filter-qld">
-									<label class="form-check-label" for="inlineRadio3">QLD</label>
+								<div class="custom-control custom-switch filter-filter">
+									<label class="custom-control-label" for="customSwitch3">QLD</label>
+									<input type="checkbox" data-toggle="switch" class="custom-control-input filter-check" id="customSwitch3" value="filter-qld">
 								</div>
-								<div class="form-check form-check-inline">
-									<input class="filter-check form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="filter-sau">
-									<label class="form-check-label" for="inlineRadio3">SAU</label>
+								<div class="custom-control custom-switch filter-filter">
+									<label class="custom-control-label" for="customSwitch4">SAU</label>
+									<input type="checkbox" data-toggle="switch" class="custom-control-input filter-check" id="customSwitch4" value="filter-sau">
 								</div>
-								<div class="form-check form-check-inline">
-									<input class="filter-check form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="filter-vic">
-									<label class="form-check-label" for="inlineRadio3">VIC</label>
+								<div class="custom-control custom-switch filter-filter">
+									<label class="custom-control-label" for="customSwitch5">VIC</label>
+									<input type="checkbox" data-toggle="switch" class="custom-control-input filter-check" id="customSwitch5" value="filter-vic">
 								</div>
 							</div>
 						</form>
@@ -218,7 +221,7 @@
 						</div>
 					</div> -->
 
-					<div class="col-md-4 portfolio filter filter-nsw">
+					<div class="col-md-4 portfolio filter filter-nsw filter-bliss  filter-mates">
 						<div class="fh5co-portfolio animate-box">
 							<a href="https://burrow-bar.myshopify.com/">
 								<div class="portfolio-entry filter-entry">
@@ -413,7 +416,7 @@
 						</div>
 					</div>
 
-					<div class="col-md-4 portfolio filter filter-nsw">
+					<div class="col-md-4 portfolio filter filter-nsw filter-mates">
 						<div class="fh5co-portfolio animate-box">
 							<a href="corretto">
 								<div class="portfolio-entry filter-entry">
@@ -1386,6 +1389,9 @@
 		<script src="js/main.js"></script>
 		<!-- JS 2.0 (Do not remove this either) -->
 		<script src="js/scripts_2.0.js"></script>
+
+		<!-- Plugins -->
+		<script src="plugins/bootstrap-switch/js/bootstrap-switch.js"></script>
 
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-162087834-1"></script>

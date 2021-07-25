@@ -101,6 +101,15 @@
   padding-left: 6rem;
 }
 
+#filter-control {
+	opacity: 0;
+	padding: 0 0 0 1rem;
+}
+
+.filter-filter {
+	display: inline-block;
+}
+
 .newsextra h4 {
   color: white;
   font-size: 24px;
@@ -274,4 +283,10 @@ div.menu {
   .venue-menu {
     padding: 22rem 0 0;
   }
+}
+
+.bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-retroOrange,
+.bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-retroOrange {
+  color: #fff;
+  background: #e58d00;
 }
