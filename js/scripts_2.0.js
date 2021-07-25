@@ -27,7 +27,16 @@
 				window.open(url, '_blank');
 			}
 		});
-  };
+
+		$(document).on('click', 'a.thirdparty', function (event) {
+			if ($(this).attr('href').indexOf("http") !== -1) {
+				event.preventDefault();
+				var url = $(this).attr('href'); 
+				window.open(url, '_blank');
+			}
+		});
+
+	};
 
 	var extra = function () {
 		var $articles = $('.newsstand h4');
@@ -78,11 +87,15 @@
 			$('#navbar .external').each(function () {
 				var $anchor = $(this);
 	
-				$anchor.attr('href')
 				$anchor.attr('href', $anchor.attr('href') + '.html');
 			});
+
+			$('#navbar .thirdparty').each(function () {
+				var $anchor = $(this);
+
+				$anchor.attr('href', $anchor.attr('href').split('.html')[0]);
+			});
 		}
- 
 	};
 
 	var loaded = function () {
