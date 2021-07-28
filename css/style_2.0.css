@@ -290,3 +290,7 @@ div.menu {
   color: #fff;
   background: #e58d00;
 }
+
+div.container.inanimate-box .animate-box {
+	opacity: 1 !important;
+}

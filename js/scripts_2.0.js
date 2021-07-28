@@ -168,23 +168,25 @@
 		var counter = $('[data-toggle="switch"]').length;
 		var counted = 0;
 
-		$('[data-toggle="switch"]').bootstrapSwitch({
-			onColor: 'retroOrange',
-			onInit: function () {
-				counted += 1;
-
-				if (counted === counter) {
-					$('#filter-control').fadeTo('slow', 1);
+		if ($.fn.bootstrapSwitch) {
+			$('[data-toggle="switch"]').bootstrapSwitch({
+				onColor: 'retroOrange',
+				onInit: function () {
+					counted += 1;
+	
+					if (counted === counter) {
+						$('#filter-control').fadeTo('slow', 1);
+					}
+				},
+				onSwitchChange: function () {
+					$('[data-toggle="switch"]').not($(this)).bootstrapSwitch('state', false, true);
+	
+					$(this).click();
 				}
-			},
-			onSwitchChange: function () {
-				$('[data-toggle="switch"]').not($(this)).bootstrapSwitch('state', false, true);
-
-				$(this).click();
-			}
-		});
-
-		$(options.stated).bootstrapSwitch('state', true, true).click();
+			});
+	
+			$(options.stated).bootstrapSwitch('state', true, true).click();
+		}
 	};
 
 	var search = function () {
