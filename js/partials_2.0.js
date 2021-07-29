@@ -1,7 +1,7 @@
 ;(function () {
 	var empartial = function () {
 		$( '#fh5co-header' ).load('partials/header.html', function () {
-			var id = document.body.id;
+			var id = document.body.id || "orphan";
 			var className = "nav-" + id
 			var selector = "#" + id + " ." + className;
 
