@@ -1,6 +1,16 @@
 ;(function () {
 	var empartial = function () {
-		$( "#fh5co-footer" ).load('partials/footer.html', function () {
+		$( '#fh5co-header' ).load('partials/header.html', function () {
+			var id = document.body.id;
+			var className = "nav-" + id
+			var selector = "#" + id + " ." + className;
+
+			$(selector).addClass("active");
+
+			window.extension();
+		});
+
+		$( '#fh5co-footer' ).load('partials/footer.html', function () {
 			var options = { year: 'numeric' };
 			var today  = new Date();
 			var year = today.toLocaleDateString("en-AU", options); // 1972

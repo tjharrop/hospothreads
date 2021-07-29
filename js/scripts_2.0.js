@@ -97,6 +97,7 @@
 			});
 		}
 	};
+	window.extension = extension;
 
 	var loaded = function () {
 		$('.portfolio-container .portfolio-image').imagesLoaded(function () {
