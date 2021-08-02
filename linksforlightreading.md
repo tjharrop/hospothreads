@@ -10,6 +10,7 @@
 https://www.google.com/search?q=venues+are+offering+free+meals
 https://www.google.com/search?q=free+meals+to+hospitality+workers
 https://www.google.com/search?q=free+hospo+meals
+https://www.google.com/search?q=hospo+supporting+hospo
 
 
 ##archive
