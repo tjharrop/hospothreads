@@ -331,6 +331,7 @@ div.container.inanimate-box .animate-box {
 }
 
 .mental-health strong {
+	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 	border-radius: 50%;
@@ -356,7 +357,9 @@ div.container.inanimate-box .animate-box {
 }
 
 .mental-health li.ruok strong {
+	background-color: rgb(253, 198, 46);
 	background-image: url(../images/talk/ruok.png);
+	background-size: 80%;
 }
 
 .mental-health span {
