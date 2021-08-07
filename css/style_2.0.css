@@ -294,3 +294,78 @@ div.menu {
 div.container.inanimate-box .animate-box {
 	opacity: 1 !important;
 }
+
+.contact-info {
+	display: inline-block;
+}
+
+.contact-form {
+	display: inline-block;
+	margin: 0 0 60px 0;
+  padding: 0;
+}
+
+@media screen and (min-width: 992px) {
+	.contact-info {
+		min-height: 195px;
+	}
+	
+	.contact-form {
+		min-height: 195px;
+	}
+}
+
+.mental-health {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+
+.mental-health li {
+	display: inline-block;
+}
+
+.mental-health a {
+	display: inline-block;
+}
+
+.mental-health strong {
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-radius: 50%;
+	display: block;
+	height: 3.2rem;
+	width: 3.2rem;
+}
+
+.mental-health a:hover strong {
+	opacity: .33;
+}
+
+.mental-health li.beyondblue strong {
+	background-image: url(../images/talk/beyondblue.png);
+}
+
+.mental-health li.blackdoginstitute strong {
+	background-image: url(../images/talk/blackdog.png);
+}
+
+.mental-health li.headspace strong {
+	background-image: url(../images/talk/headspace.png);
+}
+
+.mental-health li.ruok strong {
+	background-image: url(../images/talk/ruok.png);
+}
+
+.mental-health span {
+	left: 0;
+	opacity: 0;
+	position: absolute;
+	top: 3rem;
+}
+
+.mental-health a:hover span {
+	opacity: 1;
+}

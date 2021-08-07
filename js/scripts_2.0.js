@@ -36,6 +36,13 @@
 			}
 		});
 
+		$(document).on('click', '.mental-health a', function (event) {
+			if ($(this).attr('href').indexOf("http") !== -1) {
+				event.preventDefault();
+				var url = $(this).attr('href'); 
+				window.open(url, '_blank');
+			}
+		});
 	};
 
 	var extra = function () {
@@ -99,21 +106,34 @@
 	};
 	window.extension = extension;
 
-	var loaded = function () {
-		$('.portfolio-container .portfolio-image').imagesLoaded(function () {
-			$(".portfolio-image").each(function () {
-				$(this).hide().parent().css( "background-image", "url(" + this.src + ")");
-			});
-
-			init();
-		});
-	};
-
 	var filotope = function () {
 		// Do the needful
 		// alert("filotope")
 
 		isotope(".filter");
+	};
+
+	var filter = function (filter) {
+		$('#filter-control').on('click', '.filter-check', function (event) {
+			event.preventDefault();
+			var $selected = $(this);
+			var selector = '.' + $selected.context.value;
+
+			$('.filter-check').prop( "checked", false );
+			$selected.prop( "checked", true );
+	
+			isotope(selector);	
+		});
+	};
+
+	var filtered = function () {
+		var selector = '.filter-' + options.stated.split('-')[1].split('"')[0];
+
+		isotope(selector);
+	};
+
+	var footage = function () {
+
 	};
 
 	var isotope = function (filter) {
@@ -135,23 +155,14 @@
 		}
 	};
 
-	var filter = function (filter) {
-		$('#filter-control').on('click', '.filter-check', function (event) {
-			event.preventDefault();
-			var $selected = $(this);
-			var selector = '.' + $selected.context.value;
+	var loaded = function () {
+		$('.portfolio-container .portfolio-image').imagesLoaded(function () {
+			$(".portfolio-image").each(function () {
+				$(this).hide().parent().css( "background-image", "url(" + this.src + ")");
+			});
 
-			$('.filter-check').prop( "checked", false );
-			$selected.prop( "checked", true );
-	
-			isotope(selector);	
+			init();
 		});
-	};
-
-	var filtered = function () {
-		var selector = '.filter-' + options.stated.split('-')[1].split('"')[0];
-
-		isotope(selector);
 	};
 
 	var state = function (stated) {
@@ -220,6 +231,10 @@
 	// Document on load
 	$(function () {
 		loaded();
+	});
+
+	$(window).load(function () {
+    footage();
 	});
 
 	// Document pre-load
