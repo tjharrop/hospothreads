@@ -340,6 +340,16 @@ div.container.inanimate-box .animate-box {
 	width: 3.2rem;
 }
 
+.mental-health a:hover::before {
+	border: 0.15rem solid #e58d00;
+	border-radius: 50%;
+	content: "";
+	height: 4rem;
+	position: absolute;
+	top: -0.4rem;
+	width: 4rem;
+}
+
 .mental-health a:hover strong {
 	opacity: .33;
 }
@@ -348,12 +358,24 @@ div.container.inanimate-box .animate-box {
 	background-image: url(../images/talk/beyondblue.png);
 }
 
+.mental-health li.beyondblue a:hover::before {
+	left: -0.4rem;
+}
+
 .mental-health li.blackdoginstitute strong {
 	background-image: url(../images/talk/blackdog.png);
 }
 
+.mental-health li.blackdoginstitute a:hover::before {
+	left: 4.0rem;
+}
+
 .mental-health li.headspace strong {
 	background-image: url(../images/talk/headspace.png);
+}
+
+.mental-health li.headspace a:hover::before {
+	left: 8.4rem;
 }
 
 .mental-health li.ruok strong {
@@ -362,13 +384,20 @@ div.container.inanimate-box .animate-box {
 	background-size: 80%;
 }
 
+.mental-health li.ruok a:hover::before {
+	left: 12.8rem;
+}
+
 .mental-health span {
-	left: 0;
+	left: -9rem;
 	opacity: 0;
 	position: absolute;
 	top: 3rem;
+	z-index: -1;
 }
 
 .mental-health a:hover span {
+	left: 0;
 	opacity: 1;
+	z-index: 1;
 }
