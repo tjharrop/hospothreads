@@ -1,3 +1,7 @@
+b#heart {
+	font-size: 3.5rem;
+}
+
 .fh5co-portfolio {
   position: relative;
 }
@@ -7,11 +11,18 @@
 }
 
 .fh5co-portfolio footer {
-  position: absolute;
   background-color: #e58d00;
   color: white;
-  width: 100%;
+	opacity: 1;
   padding: 0 1rem;
+  position: absolute;
+  transition: opacity .15s ease-in-out;
+  width: 100%;
+}
+
+.fh5co-portfolio:hover footer {
+	opacity: 0.25;
+  transition: opacity .15s ease-in-out;
 }
 
 #fh5co-counter-section {
