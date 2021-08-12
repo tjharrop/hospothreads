@@ -158,16 +158,17 @@
 	var loaded = function () {
 		$('.portfolio-container .portfolio-image').imagesLoaded(function () {
 			$(".portfolio-image").each(function () {
-				$(this).hide().parent().css( "background-image", "url(" + this.src + ")");
+				$(this).hide();
 			});
 
 			init();
+			overloaded();
 		});
+	};
 
+	var overloaded = function () {
 		$('.portfolio-container .portfolio-lazy').each(function () {
-			var $element = $(this);
-
-			$element.attr("src", $element.data('src'));
+			$(this).parent().css( "background-image", "url(" + this.dataset.src + ")");
 		});
 	};
 
