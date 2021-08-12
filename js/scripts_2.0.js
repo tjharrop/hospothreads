@@ -163,6 +163,12 @@
 
 			init();
 		});
+
+		$('.portfolio-container .portfolio-lazy').each(function () {
+			var $element = $(this);
+
+			$element.attr("src", $element.data('src'));
+		});
 	};
 
 	var state = function (stated) {
