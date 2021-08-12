@@ -157,8 +157,12 @@
 
 	var loaded = function () {
 		$('.portfolio-container .portfolio-image').imagesLoaded(function () {
-			$(".portfolio-image").each(function () {
+			$(".portfolio-lazy").each(function () {
 				$(this).hide();
+			});
+
+			$(".portfolio-critical").each(function () {
+				$(this).parent().css( "background-image", "url(" + this.src + ")");
 			});
 
 			init();
