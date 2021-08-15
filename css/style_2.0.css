@@ -10,6 +10,10 @@ b#heart {
   padding: 5rem 2rem 2rem;
 }
 
+.portfolio-entry {
+  background-position: top center;
+}
+
 .fh5co-portfolio footer {
   background-color: #e58d00;
   color: white;

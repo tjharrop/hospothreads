@@ -477,7 +477,6 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   float: left;
   background-size: cover;
-  background-position: center center;
   background-repeat: no-repeat;
   position: relative;
   height: 300px;
@@ -495,7 +494,6 @@ h1, h2, h3, h4, h5, h6 {
   right: 0;
   background: rgba(255, 255, 255, 0.95);
   opacity: 0;
-  padding: 30px;
   transition: 0.3s;
 }
 .fh5co-portfolio .portfolio-entry .desc p {
