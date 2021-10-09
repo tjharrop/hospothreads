@@ -420,3 +420,20 @@ div.container.inanimate-box .animate-box {
 	opacity: 1;
 	z-index: 1;
 }
+
+div.jobsboard {
+  margin: 0 -1rem;
+  padding-left: 0rem;
+}
+
+.jobsboard h1 {
+  font-size: 3rem;
+}
+
+.jobsboard h3 {
+  background-color: #8f989f;
+  border-top: .25rem solid;
+  color: white;
+  margin: 0 0 .5rem;
+  padding: 1.5rem;
+}

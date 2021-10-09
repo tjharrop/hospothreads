@@ -1,0 +1,94 @@
+div#down_under {
+	background-image: url(../images/jobs/straya.jpg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	height: 0;
+	padding-bottom: 56.41025641%; /* 352 / 624 * 100 */
+	position: relative;
+	width: 100%;
+}
+
+div#down_under a {
+	position: absolute;
+}
+
+div#down_under a:hover {
+	/* background-color: orange; */
+	cursor: pointer;
+}
+
+div#down_under a#wa {
+	left: 23.4%;
+	top: 13.35%;
+	width: 18.59%;
+	height: 55.97%;
+	z-index: 2;
+}
+
+div#down_under a#nt {
+	left: 42.15%;
+	top: 5.68%;
+	width: 12.82%;
+	height: 38.64%;
+	z-index: 2;
+}
+
+div#down_under a#qld {
+	left: 54.97%;
+	top: 5.68%;
+	width: 19.39%;
+	height: 44.03%;
+	z-index: 2;
+}
+
+div#down_under a#sa {
+	left: 42.15%;
+	top: 44.6%;
+	width: 15.54%;
+	height: 33.81%;
+	z-index: 2;
+}
+
+div#down_under a#tas {
+	left: 57.85%;
+	top: 78.41%;
+	width: 11.38%;
+	height: 19.03%;
+	z-index: 2;
+}
+
+div#down_under a#nsw {
+	left: 57.85%;
+	top: 47.73%;
+	width: 16.35%;
+	height: 18.75%;
+	z-index: 2;
+}
+
+div#down_under a#nsw2 {
+	left: 62.98%;
+	top: 66.48%;
+	width: 10.9%;
+	height: 5.68%;
+	z-index: 2;
+}
+
+div#down_under a#vic {
+	left: 57.69%;
+	top: 64.49%;
+	width: 11.06%;
+	height: 13.35%;
+	z-index: 1;
+}
+
+div#down_under a#act {
+	left: 65.87%;
+	top: 69.6%;
+	width: 3.21%;
+	height: 5.68%;
+	z-index: 2;
+}
+
+#fark span {
+	color: silver;
+}
