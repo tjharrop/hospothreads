@@ -37,29 +37,7 @@
 			$("#faaark").html(message);
 			$("#gaaarn").html("");
 		},
-		launch: function (key) {
-			key = Number(key) || 0;
-
-			// alert(key)
-
-			if (key < STRAYA.SITES.length - 1) {
-				let url = STRAYA.URLS[STRAYA.SITES[key]];
-				let locator = url.replace(/\{1\}/, STRAYA.CAPITALS[STRAYA.SELECTED]);
-				locator = locator.replace(/\{2\}/, STRAYA.SELECTED);
-				let next = key + 1;
-				
-				let encoded = "./opener.html?site=" + next + "&selected=" + STRAYA.SELECTED + "&url=" + encodeURIComponent(locator);
-
-				if ($("#maaate").attr("href")) {
-					$("#maaate").attr("href", encoded).click(function () {
-						window.open(encoded, "hospothreads_" + url);
-					}).trigger("click");
-				} else {
-					window.open(encoded, "hospothreads_" + url);
-				}
-			}
-		},
-		launchAll: function () {
+		launch: function () {
 			const popped = {};
 
 			for (const url in STRAYA.URLS) {
@@ -110,7 +88,6 @@
 				}
 
 				STRAYA.launch(value);
-				// STRAYA.refresh(STRAYA.SITES[value - 1]);
 			}
 		},
 		listen: function () {
@@ -127,11 +104,10 @@
 
 			$("#faaark").click(function (event) {
 				event.stopPropagation();
-				STRAYA.launchAll();
+				STRAYA.launch();
 			});
 		},
 		init: function () {
-			// this.search(); 
 			this.listen();
 		}
 	};
