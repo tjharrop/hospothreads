@@ -437,3 +437,11 @@ div.jobsboard {
   margin: 0 0 .5rem;
   padding: 1.5rem;
 }
+
+.jobsboard h4 {
+  background-color: #e58d00;
+  border-top: .25rem solid;
+  color: white;
+  margin: 0 0 .5rem;
+  padding: 1.5rem;
+}
