@@ -450,3 +450,75 @@ div.jobsboard {
 	font-size: 4rem;
 	line-height: 4rem;
 }
+
+div.speaker {
+  margin: 0 -1rem;
+  padding-left: 0rem;
+}
+
+.speaker h1 {
+  font-size: 3rem;
+}
+
+.speaker h3 {
+  background-color: #8f989f;
+  border-top: .25rem solid;
+  color: white;
+  margin: 0 0 .5rem;
+  padding: 1.5rem;
+}
+
+.speaker h4 {
+  background-color: #e58d00;
+  border-top: .25rem solid;
+  color: white;
+  margin: 0 0 .5rem;
+  padding: 1.5rem;
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  /* padding-top: 86%; */
+  height: 60rem;
+	border: .25rem solid #e58d00;
+	border-radius: 1.5rem;
+}
+
+/* @media (max-width: 560px) {
+	.wrapper {
+		padding-top: 110%;
+	}
+} */
+
+/* @media (max-width: 990px) {
+	.wrapper {
+		padding-top: 80%;	
+	}
+} */
+
+/* @media (max-width: 760px) {
+	.wrapper {
+		border-color: purple;
+		padding-top: 86%;
+	}
+}
+
+@media (max-width: 660px) {
+	.wrapper {
+		border-color: green;
+		padding-top: 120%;
+	}
+} */
+
+.iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 60rem;
+  border: none;
+}
